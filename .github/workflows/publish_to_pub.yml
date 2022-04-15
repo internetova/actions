@@ -5,7 +5,15 @@ env:
   CHANGELOG_PATH: './CHANGELOG.md'
   PANA_TOTAL: '80'
 
-on: [ workflow_call ]
+on:
+  workflow_call:
+      secrets:
+        CREDENTIAL_JSON:
+          required: true
+        OAUTH_ACCESS_TOKEN:
+          required: true
+        OAUTH_REFRESH_TOKEN:
+          required: true
 
 jobs:
 #  check_versions:
