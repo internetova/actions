@@ -6,11 +6,6 @@ env:
   PANA_TOTAL: '80'
 
 on: [ workflow_call ]
-  push:
-    branches:
-      - main
-    tags:
-      - v*
 
 jobs:
   check_versions:
